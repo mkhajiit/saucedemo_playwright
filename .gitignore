@@ -1,0 +1,12 @@
+# node modules
+node_modules/
+
+# 환경변수 파일
+.env
+
+# Playwright 리포트
+playwright-report/
+
+# OS별 불필요 파일
+.DS_Store
+Thumbs.db
