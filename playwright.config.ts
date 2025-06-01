@@ -18,7 +18,12 @@ export default defineConfig({
       name: 'cartTest',
       testDir: './tests/cart',
     },
+    {
+      name: 'itemListTest',
+      testDir: './tests/item-list',
+    },
   ],
+  // 디버깅용 옵션 headless 모드 끄기
   // use: {
   //   headless: false,
   //   launchOptions: {
