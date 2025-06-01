@@ -1,7 +1,8 @@
 import test, { expect } from '@playwright/test';
-import login from '../helper/login';
+import login from '../../helper/login';
+import { URLS } from '../../constants/urls';
 
-const BASE_URL = 'https://www.saucedemo.com/';
+const BASE_URL = URLS.BASE;
 
 test.beforeEach(async ({ page }) => {
   await page.goto(BASE_URL);

@@ -4,7 +4,11 @@ export default defineConfig({
   projects: [
     {
       name: 'loginTest',
-      testDir: './tests',
+      testDir: './tests/login',
+    },
+    {
+      name: 'logoutTest',
+      testDir: './tests/logout',
     },
   ],
   use: {
