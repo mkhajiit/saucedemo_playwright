@@ -10,11 +10,15 @@ export default defineConfig({
       name: 'logoutTest',
       testDir: './tests/logout',
     },
-  ],
-  use: {
-    headless: false,
-    launchOptions: {
-      slowMo: 500, // 이렇게 넣어야 타입스크립트 오류 안 남
+    {
+      name: 'naviTest',
+      testDir: './tests/navigation',
     },
-  },
+  ],
+  // use: {
+  //   headless: false,
+  //   launchOptions: {
+  //     slowMo: 500, // 이렇게 넣어야 타입스크립트 오류 안 남
+  //   },
+  // },
 });
