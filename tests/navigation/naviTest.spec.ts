@@ -1,8 +1,7 @@
 import test, { expect } from '@playwright/test';
 import login from '../../helper/login';
 import { URLS } from '../../constants/urls';
-
-const itemIds = ['add-to-cart-sauce-labs-backpack', 'add-to-cart-sauce-labs-bike-light'];
+import itemIds from '../../constants/itemIds';
 
 test.beforeEach(async ({ page }) => {
   await page.goto(URLS.BASE);
@@ -24,7 +23,7 @@ test('About 테스트', async ({ page }) => {
 
 test('Reset App State 테스트', async ({ page }) => {
   for (const id of itemIds) {
-    await page.click(`#${id}`);
+    await page.click(`#${id[0]}`);
   }
   await page.click('#reset_sidebar_link');
 

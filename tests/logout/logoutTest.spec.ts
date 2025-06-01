@@ -15,5 +15,4 @@ test('로그아웃 테스트', async ({ page }) => {
   await page.click('#logout_sidebar_link');
 
   await expect(page).toHaveURL(BASE_URL);
-  await page.waitForTimeout(2000);
 });

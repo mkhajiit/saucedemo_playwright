@@ -14,6 +14,10 @@ export default defineConfig({
       name: 'naviTest',
       testDir: './tests/navigation',
     },
+    {
+      name: 'cartTest',
+      testDir: './tests/cart',
+    },
   ],
   // use: {
   //   headless: false,

@@ -12,7 +12,7 @@ test.beforeEach(async ({ page }) => {
 test('로그인 성공 확인', async ({ page }) => {
   await login(page, 'standard_user', 'secret_sauce');
 
-  await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
+  expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 });
 
 // 로그인 실패 테스트(미입력)

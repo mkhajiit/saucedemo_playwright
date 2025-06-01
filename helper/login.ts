@@ -1,3 +1,4 @@
+// 로그인 입력 제출 함수
 import { Page } from '@playwright/test';
 
 export default async function login(page: Page, username: string, password: string) {
