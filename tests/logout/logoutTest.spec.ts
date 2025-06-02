@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
   await page.goto(BASE_URL);
 });
 
-test('로그아웃 테스트', async ({ page }) => {
+test('ST-11: 로그아웃 테스트', async ({ page }) => {
   await login(page, 'standard_user', 'secret_sauce');
 
   await page.click('#react-burger-menu-btn');

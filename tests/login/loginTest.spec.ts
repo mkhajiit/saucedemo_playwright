@@ -9,14 +9,14 @@ test.beforeEach(async ({ page }) => {
 });
 
 // 로그인 성공 테스트
-test('로그인 성공 확인', async ({ page }) => {
+test('ST-6: 로그인 성공 확인', async ({ page }) => {
   await login(page, 'standard_user', 'secret_sauce');
 
   expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 });
 
 // 로그인 실패 테스트(미입력)
-test('로그인 미입력 실패 테스트', async ({ page }) => {
+test('ST-15: 로그인 미입력 실패 테스트', async ({ page }) => {
   await page.click('#login-button');
 
   const errorMessage = await page.locator('.error-message-container.error').textContent();
@@ -24,7 +24,7 @@ test('로그인 미입력 실패 테스트', async ({ page }) => {
 });
 
 // 로그인 실패 테스트(아이디)
-test('로그인 유효하지 않은 아이디 입력 실패 테스트', async ({ page }) => {
+test('ST-17: 로그인 유효하지 않은 아이디 입력 실패 테스트', async ({ page }) => {
   await login(page, 'standard_user12', 'secret_sauce');
 
   const errorMessage = await page.locator('.error-message-container.error').textContent();
@@ -34,7 +34,7 @@ test('로그인 유효하지 않은 아이디 입력 실패 테스트', async ({
 });
 
 // 로그인 실패 테스트(비밀번호)
-test('로그인 유효하지 않은 비밀번호 입력 실패 테스트', async ({ page }) => {
+test('ST-17: 로그인 유효하지 않은 비밀번호 입력 실패 테스트', async ({ page }) => {
   await login(page, 'standard_user', '1234');
 
   const errorMessage = await page.locator('.error-message-container.error').textContent();

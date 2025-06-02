@@ -9,19 +9,19 @@ test.beforeEach(async ({ page }) => {
   await page.click('#react-burger-menu-btn');
 });
 
-test('All Items 테스트', async ({ page }) => {
+test('ST-26: All Items 테스트', async ({ page }) => {
   await page.click('#inventory_sidebar_link');
 
   await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 });
 
-test('About 테스트', async ({ page }) => {
+test('ST-26: About 테스트', async ({ page }) => {
   await page.click('#about_sidebar_link');
 
   await expect(page).toHaveURL('https://saucelabs.com/');
 });
 
-test('Reset App State 테스트', async ({ page }) => {
+test('ST-26: Reset App State 테스트', async ({ page }) => {
   for (const id of itemIds) {
     await page.click(`#${id[0]}`);
   }

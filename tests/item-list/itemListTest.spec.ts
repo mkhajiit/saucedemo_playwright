@@ -24,7 +24,7 @@ test.beforeEach(async ({ page }) => {
   await login(page, 'standard_user', 'secret_sauce');
 });
 
-test('알파벳 정순 정렬 테스트', async ({ page }) => {
+test('ST-78: 알파벳 정순 정렬 테스트', async ({ page }) => {
   // 초기 목록을 정순 정렬해 예상 목록을 할당
   const itemNames = await getItemNames(page);
   const sortedItem = [...itemNames].sort();
@@ -37,7 +37,7 @@ test('알파벳 정순 정렬 테스트', async ({ page }) => {
   expect(azSortedItem).toEqual(sortedItem);
 });
 
-test('알파벳 역순 정렬 테스트', async ({ page }) => {
+test('ST-78: 알파벳 역순 정렬 테스트', async ({ page }) => {
   // 역순 정렬으로 예상 목록 할당
   const itemNames = await getItemNames(page);
   const sortedItem = [...itemNames].sort().reverse();
@@ -48,7 +48,7 @@ test('알파벳 역순 정렬 테스트', async ({ page }) => {
   expect(zaSortedItem).toEqual(sortedItem);
 });
 
-test('가격 낮은순 정렬 테스트', async ({ page }) => {
+test('ST-78: 가격 낮은순 정렬 테스트', async ({ page }) => {
   const itemsBefore = await getNameAndPrice(page);
   // 예상되는 정렬된 아이템들
   const expected = [...itemsBefore].sort((a, b) => a.price - b.price);
@@ -69,7 +69,7 @@ test('가격 낮은순 정렬 테스트', async ({ page }) => {
   expect(lohiItems).toEqual(expected);
 });
 
-test('가격 높은순 정렬 테스트', async ({ page }) => {
+test('ST-78: 가격 높은순 정렬 테스트', async ({ page }) => {
   const itemsBefore = await getNameAndPrice(page);
   // 예상되는 정렬된 아이템들
   const expected = [...itemsBefore].sort((a, b) => b.price - a.price);
