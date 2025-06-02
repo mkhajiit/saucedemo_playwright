@@ -9,7 +9,7 @@ const results = [];
 for (const suite of report.suites) {
   for (const test of suite.specs) {
     for (const run of test.tests) {
-      const title = run.title.join(' ');
+      const title = Array.isArray(run.title) ? run.title.join(' ') : run.title; // 배열 아닌 경우도 대비
       const status = run.results[0]?.status === 'passed' ? 'PASSED' : 'FAILED';
 
       // 2. 테스트 이름에서 이슈 키 찾기 (예: CALC-101)

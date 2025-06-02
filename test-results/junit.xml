@@ -1,0 +1,59 @@
+<testsuites id="" name="" tests="19" failures="0" skipped="0" errors="0" time="18.597703000000003">
+<testsuite name="tests\login\loginTest.spec.ts" timestamp="2025-06-02T12:31:16.819Z" hostname="loginTest" tests="4" failures="0" skipped="0" time="8.799" errors="0">
+<testcase name="ST-6: 로그인 성공 확인" classname="tests\login\loginTest.spec.ts" time="4.259">
+</testcase>
+<testcase name="ST-15: 로그인 미입력 실패 테스트" classname="tests\login\loginTest.spec.ts" time="1.582">
+</testcase>
+<testcase name="ST-17: 로그인 유효하지 않은 아이디 입력 실패 테스트" classname="tests\login\loginTest.spec.ts" time="1.502">
+</testcase>
+<testcase name="ST-17: 로그인 유효하지 않은 비밀번호 입력 실패 테스트" classname="tests\login\loginTest.spec.ts" time="1.456">
+</testcase>
+</testsuite>
+<testsuite name="tests\logout\logoutTest.spec.ts" timestamp="2025-06-02T12:31:16.819Z" hostname="logoutTest" tests="1" failures="0" skipped="0" time="5.28" errors="0">
+<testcase name="ST-11: 로그아웃 테스트" classname="tests\logout\logoutTest.spec.ts" time="5.28">
+</testcase>
+</testsuite>
+<testsuite name="tests\navigation\naviTest.spec.ts" timestamp="2025-06-02T12:31:16.819Z" hostname="naviTest" tests="3" failures="0" skipped="0" time="10.687" errors="0">
+<testcase name="ST-26: All Items 테스트" classname="tests\navigation\naviTest.spec.ts" time="5.437">
+</testcase>
+<testcase name="ST-26: About 테스트" classname="tests\navigation\naviTest.spec.ts" time="3.192">
+</testcase>
+<testcase name="ST-26: Reset App State 테스트" classname="tests\navigation\naviTest.spec.ts" time="2.058">
+</testcase>
+</testsuite>
+<testsuite name="tests\cart\cartTest.spec.ts" timestamp="2025-06-02T12:31:16.819Z" hostname="cartTest" tests="7" failures="0" skipped="0" time="16.074" errors="0">
+<testcase name="ST-42: 제품 추가 테스트" classname="tests\cart\cartTest.spec.ts" time="4.65">
+</testcase>
+<testcase name="ST-43: 제품 제거 테스트" classname="tests\cart\cartTest.spec.ts" time="1.824">
+</testcase>
+<testcase name="ST-56: 미입력 checkout 테스트" classname="tests\cart\cartTest.spec.ts" time="2.087">
+</testcase>
+<testcase name="ST-59: 잘못된 정보 입력 checkout 테스트" classname="tests\cart\cartTest.spec.ts" time="1.809">
+<properties>
+<property name="fail" value="">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|cartTest-ST-59-잘못된-정보-입력-checkout-테스트-cartTest\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="ST-60: 알맞은 정보 입력 checkout 테스트" classname="tests\cart\cartTest.spec.ts" time="1.75">
+</testcase>
+<testcase name="ST-61: 주문 성공 테스트" classname="tests\cart\cartTest.spec.ts" time="1.529">
+</testcase>
+<testcase name="ST-62: 장바구니 유지 테스트" classname="tests\cart\cartTest.spec.ts" time="2.425">
+</testcase>
+</testsuite>
+<testsuite name="tests\item-list\itemListTest.spec.ts" timestamp="2025-06-02T12:31:16.819Z" hostname="itemListTest" tests="4" failures="0" skipped="0" time="5.753" errors="0">
+<testcase name="ST-78: 알파벳 정순 정렬 테스트" classname="tests\item-list\itemListTest.spec.ts" time="1.696">
+</testcase>
+<testcase name="ST-78: 알파벳 역순 정렬 테스트" classname="tests\item-list\itemListTest.spec.ts" time="1.437">
+</testcase>
+<testcase name="ST-78: 가격 낮은순 정렬 테스트" classname="tests\item-list\itemListTest.spec.ts" time="1.352">
+</testcase>
+<testcase name="ST-78: 가격 높은순 정렬 테스트" classname="tests\item-list\itemListTest.spec.ts" time="1.268">
+</testcase>
+</testsuite>
+</testsuites>

@@ -24,7 +24,7 @@ export default defineConfig({
     },
   ],
   // 테스트 결과 리포트 파일의 유형과 저장 될 위치 지정
-  reporter: [['junit', { outputFile: 'test-results/junit.xml' }]],
+  reporter: [['json', { outputFile: 'playwright-report.json' }]],
   // 디버깅용 옵션 headless 모드 끄기
   // use: {
   //   headless: false,

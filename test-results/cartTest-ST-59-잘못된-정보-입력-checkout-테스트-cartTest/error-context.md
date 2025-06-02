@@ -1,6 +1,6 @@
 # Test info
 
-- Name: 잘못된 정보 입력 checkout 테스트
+- Name: ST-59: 잘못된 정보 입력 checkout 테스트
 - Location: D:\2025 Study\프로젝트\saucedemo_playwright\tests\cart\cartTest.spec.ts:43:6
 
 # Error details
@@ -60,14 +60,14 @@ Expected: not "https://www.saucedemo.com/checkout-step-two.html"
   13 |   await page.click('.shopping_cart_link');
   14 | });
   15 |
-  16 | test('제품 추가 테스트', async ({ page }) => {
+  16 | test('ST-42: 제품 추가 테스트', async ({ page }) => {
   17 |   // 해당 클래스명을 가진 모든 요소의 텍스트를 배열로 추출
   18 |   const cartItemNames = await page.locator('.inventory_item_name').allTextContents();
   19 |   const expectedNames = itemIds.map(([, name]) => name);
   20 |   expect(cartItemNames).toEqual(expectedNames);
   21 | });
   22 |
-  23 | test('제품 제거 테스트', async ({ page }) => {
+  23 | test('ST-43: 제품 제거 테스트', async ({ page }) => {
   24 |   // 상수로 저장된 add 버튼 아이디를 remove 아이디로 변경함
   25 |   const removeId = itemIds.map(([id]) => id.replace('add-to-cart-', 'remove-'));
   26 |   for (const remove of removeId) {
@@ -78,7 +78,7 @@ Expected: not "https://www.saucedemo.com/checkout-step-two.html"
   31 |   await expect(remainItem).toHaveCount(0);
   32 | });
   33 |
-  34 | test('미입력 checkout 테스트', async ({ page }) => {
+  34 | test('ST-56: 미입력 checkout 테스트', async ({ page }) => {
   35 |   await page.click('#checkout');
   36 |   await page.click('#continue');
   37 |
@@ -87,26 +87,26 @@ Expected: not "https://www.saucedemo.com/checkout-step-two.html"
   40 | });
   41 |
   42 | // 실패하게 설계한 테스트 실패허용
-  43 | test.fail('잘못된 정보 입력 checkout 테스트', async ({ page }) => {
+  43 | test.fail('ST-59: 잘못된 정보 입력 checkout 테스트', async ({ page }) => {
   44 |   await checkout(page, '132412', '   ', 'my home~');
 > 45 |   expect(page.url()).not.toBe('https://www.saucedemo.com/checkout-step-two.html');
      |                          ^ Error: expect(received).not.toBe(expected) // Object.is equality
   46 | });
   47 |
-  48 | test('알맞은 정보 입력 checkout 테스트', async ({ page }) => {
+  48 | test('ST-60: 알맞은 정보 입력 checkout 테스트', async ({ page }) => {
   49 |   await checkout(page, '제헌', '연', '042967');
   50 |
   51 |   expect(page.url()).toBe('https://www.saucedemo.com/checkout-step-two.html');
   52 | });
   53 |
-  54 | test('주문 성공 테스트', async ({ page }) => {
+  54 | test('ST-61: 주문 성공 테스트', async ({ page }) => {
   55 |   await checkout(page, '제헌', '연', '042967');
   56 |   await page.click('#finish');
   57 |
   58 |   expect(page.url()).toBe('https://www.saucedemo.com/checkout-complete.html');
   59 | });
   60 |
-  61 | test('장바구니 유지 테스트', async ({ page }) => {
+  61 | test('ST-62: 장바구니 유지 테스트', async ({ page }) => {
   62 |   await page.click('#react-burger-menu-btn');
   63 |   await page.click('#logout_sidebar_link');
   64 |   await login(page, 'standard_user', 'secret_sauce');
