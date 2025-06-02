@@ -26,7 +26,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests (JSON reporter)
-        run: npx playwright test --reporter=json --output=playwright-report.json
+        run: npx playwright test
 
       - name: Convert Playwright JSON to Xray JSON
         run: node convert-to-xray-json.js
