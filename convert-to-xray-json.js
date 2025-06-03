@@ -1,3 +1,4 @@
+// Playwright 리포트 json 을 xray의 json에 맞는 형태로 변환해주는 컨버터
 const fs = require('fs');
 
 const raw = fs.readFileSync('playwright-report.json', 'utf-8');
